@@ -29,6 +29,11 @@ app.use("/api/hero", require("./routes/hero.routes"));
 app.use("/api/hero/admin", require("./routes/adminRoutes")); // ✅ add this
 app.use("/api/contact", require("./routes/contact.routes"));
 
+app.use("/api/product-showcase", require("./routes/productShowcase.routes"));
+app.use("/api/testimonials", require("./routes/testimonial.routes"));
+app.use("/api/footer", require("./routes/footer.routes"));
+app.use("/api/about", require("./routes/about.routes"));
+
 
 /* ---------------- Server ---------------- */
 app.listen(process.env.PORT, () =>

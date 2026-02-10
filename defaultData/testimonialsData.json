@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "id": "t1", "src": "/1.png", "w": 274, "h": 312, "x": 0, "y": 0, "name": "Sarah J.", "rating": 5, "review": "The intricate details on the mandala are breathtaking. The craftsmanship is top-notch!" },
+    { "id": "t2", "src": "/10.png", "w": 225, "h": 300, "x": 109, "y": 27, "name": "Michael T.", "rating": 4, "review": "Exceptional weight and quality. Fits perfectly in my living room." },
+    { "id": "t3", "src": "/8.png", "w": 232, "h": 295, "x": 165, "y": 448, "name": "Emma W.", "rating": 5, "review": "Fast shipping and museum-grade packaging. Beautiful presentation." },
+    { "id": "t4", "src": "/4.png", "w": 426, "h": 300, "x": 313, "y": 52, "name": "David B.", "rating": 5, "review": "A masterpiece of Tibetan craft. A true treasure in our home." },
+    { "id": "t5", "src": "/39.png", "w": 344, "h": 242, "x": 397, "y": 398, "name": "Jessica L.", "rating": 4, "review": "Bridges the gap between tradition and modern decor perfectly." },
+    { "id": "t6", "src": "/9.png", "w": 310, "h": 511, "x": 746, "y": 143, "name": "Daniel K.", "rating": 5, "review": "The resonance lingers for minutes. Exceeded every expectation." },
+    { "id": "t7", "src": "/4.png", "w": 302, "h": 300, "x": 995, "y": 442, "name": "Sophia M.", "rating": 5, "review": "The concierge team was incredibly helpful and kind throughout." },
+    { "id": "t8", "src": "/5.png", "w": 452, "h": 300, "x": 1068, "y": 69, "name": "James R.", "rating": 5, "review": "Exquisite silverwork. Simply stunning artwork." },
+    { "id": "t9", "src": "/3.png", "w": 418, "h": 300, "x": 1294, "y": 471, "name": "Olivia P.", "rating": 4, "review": "Good value for money. Looks even better in person." },
+    { "id": "t10", "src": "/6.png", "w": 452, "h": 300, "x": 1391, "y": 156, "name": "William H.", "rating": 5, "review": "The colors are so vibrant. A beautiful addition to my collection." }
+  ]
+}

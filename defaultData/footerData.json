@@ -1,0 +1,21 @@
+{
+  "brandText": "Preserving the spirit of Tibetan heritage through meticulously crafted jewellery and sacred arts.",
+  "socials": {
+    "instagram": "#",
+    "pinterest": "#",
+    "twitter": "#"
+  },
+  "quickLinks": [
+    { "label": "Home", "url": "/" },
+    { "label": "Products", "url": "/products" },
+    { "label": "Our Story", "url": "/about" },
+    { "label": "Contact", "url": "/contact" }
+  ],
+  "helpLinks": [
+    { "label": "Payment Options", "url": "/payment" },
+    { "label": "Returns", "url": "/returns" },
+    { "label": "Privacy Policies", "url": "/privacy" }
+  ],
+  "newsletterText": "Join our collective for archival releases and artisan stories.",
+  "companyName": "The Cyber Loom PVT. LTD"
+}

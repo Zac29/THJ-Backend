@@ -9,10 +9,29 @@ exports.submitInquiry = async (req, res) => {
 };
 
 // admin gets all inquiries
+// exports.getInquiries = async (req, res) => {
+//   const data = await Inquiry.find().sort({ createdAt: -1 });
+//   res.json(data);
+// };
+
 exports.getInquiries = async (req, res) => {
-  const data = await Inquiry.find().sort({ createdAt: -1 });
+  let data = await Inquiry.find().sort({ createdAt: -1 });
+
+  // 🧪 If DB empty, inject dummy inquiry
+  if (data.length === 0) {
+    const dummy = await Inquiry.create({
+      name: "Test User",
+      email: "testuser@gmail.com",
+      message: "This is a dummy inquiry for testing admin panel.",
+      replied: false,
+    });
+
+    data = [dummy];
+  }
+
   res.json(data);
 };
+
 
 // admin replies
 exports.replyInquiry = async (req, res) => {

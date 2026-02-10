@@ -1,0 +1,19 @@
+{
+  "label": "Global Archive",
+  "heading": "50M+ Product Sold",
+  "description": "An exclusive collection of 50M+ artifacts, preserved through time and delivered to your space.",
+  "buttonText": "Discover All",
+  "buttonLink": "/discover",
+  "buttonTextColor": "#ffffff",
+  "buttonBgColor": "#1c1917",
+  "sliderItems": [
+    {
+      "id": "01",
+      "category": "Pottery",
+      "title": "Hand-Thrown Vessel",
+      "image": "/Pot.png",
+      "imagePosition": "center",
+      "order": 1
+    }
+  ]
+}
