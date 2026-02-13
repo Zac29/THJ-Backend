@@ -9,7 +9,7 @@ const app = express();
 /* ---------------- CORS (VERY IMPORTANT) ---------------- */
 app.use(
   cors({
-    origin: "http://localhost:5175", // your Vite port
+    origin: ["http://localhost:5173","http://localhost:3000"], // your Vite port
     credentials: true,
   })
 );
@@ -24,17 +24,20 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
+  
 /* ---------------- Routes ---------------- */
 app.use("/api/hero", require("./routes/hero.routes"));
 app.use("/api/hero/admin", require("./routes/adminRoutes")); // ✅ add this
 app.use("/api/contact", require("./routes/contact.routes"));
 
+app.use("/api/products", require("./routes/productRoutes"));
+
 app.use("/api/product-showcase", require("./routes/productShowcase.routes"));
 app.use("/api/testimonials", require("./routes/testimonial.routes"));
 app.use("/api/footer", require("./routes/footer.routes"));
 app.use("/api/about", require("./routes/about.routes"));
-
-
+//app.use("/api/products", require("./routes/uploadRoutes"));
+app.use("/api/upload", require("./routes/aboutUpload.routes"));
 /* ---------------- Server ---------------- */
 app.listen(process.env.PORT, () =>
   console.log(`Server running on port ${process.env.PORT}`)

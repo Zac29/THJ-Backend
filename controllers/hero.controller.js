@@ -1,10 +1,24 @@
 const Hero = require("../models/Hero");
 
 // Get hero config
+// controllers/hero.controller.js
 exports.getHero = async (req, res) => {
-  const hero = await Hero.findOne();
-  res.json(hero);
+  try {
+    let hero = await Hero.findOne();
+
+    if (!hero) {
+      hero = await Hero.create({
+        slides: [],
+        style: {},
+      });
+    }
+
+    res.json(hero);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
+
 
 // Create / Update hero
 exports.updateHero = async (req, res) => {

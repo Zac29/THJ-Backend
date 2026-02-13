@@ -1,6 +1,6 @@
 {
   "label": "Global Archive",
-  "heading": "50M+ Product Sold",
+  "heading": "50M+ \n Product Sold",
   "description": "An exclusive collection of 50M+ artifacts, preserved through time and delivered to your space.",
   "buttonText": "Discover All",
   "buttonLink": "/discover",
@@ -11,9 +11,41 @@
       "id": "01",
       "category": "Pottery",
       "title": "Hand-Thrown Vessel",
-      "image": "/Pot.png",
+      "image": "https://res.cloudinary.com/da3udp8hz/image/upload/v1770806057/Pot_txg2y6.png",
       "imagePosition": "center",
       "order": 1
+    },
+    {
+      "id": "02",
+      "category": "Sculpture",
+      "title": "Ancient Deity",
+      "image": "https://res.cloudinary.com/da3udp8hz/image/upload/v1770806057/Statues_qy2z5m.png",
+      "imagePosition": "center",
+      "order": 2
+    },
+    {
+      "id": "03",
+      "category": "Artifact",
+      "title": "Ritual Bowl",
+      "image": "https://res.cloudinary.com/da3udp8hz/image/upload/v1770806057/Bowl_as3p1q.png",
+      "imagePosition": "center",
+      "order": 3
+    },
+    {
+      "id": "04",
+      "category": "Mask",
+      "title": "Ceremonial Face",
+      "image": "https://res.cloudinary.com/da3udp8hz/image/upload/v1770806057/item_v4f8u2.png",
+      "imagePosition": "center",
+      "order": 4
+    },
+    {
+      "id": "05",
+      "category": "Metalware",
+      "title": "Temple Bell",
+      "image": "https://res.cloudinary.com/da3udp8hz/image/upload/v1770806057/decore_z8j9k1.png",
+      "imagePosition": "center",
+      "order": 5
     }
   ]
 }

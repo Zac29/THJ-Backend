@@ -5,8 +5,9 @@ const defaultData = require("../defaultData/testimonialsData.json");
 exports.getLayout = async (req, res) => {
   let data = await TestimonialLayout.findOne();
 
-  if (!data) {
-    data = await TestimonialLayout.create(defaultData);
+   if (!data) {
+    // ✅ correct seeding
+    data = await TestimonialLayout.create({ items: defaultData });
   }
 
   res.json(data);
@@ -30,8 +31,14 @@ exports.updateLayout = async (req, res) => {
 };
 
 /* ---------------- RESET ---------------- */
+/* ---------------- RESET ---------------- */
 exports.resetLayout = async (req, res) => {
   await TestimonialLayout.deleteMany();
-  const data = await TestimonialLayout.create(defaultData);
+
+  const data = await TestimonialLayout.create({
+    items: defaultData,   // ✅ FIXED
+  });
+
   res.json(data);
 };
+

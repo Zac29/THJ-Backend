@@ -2,21 +2,21 @@
   "banner": {
     "title": "Our Heritage",
     "breadcrumb": "About",
-    "image": "/contact-banner.png"
+    "image": "/images/contact-banner.png"
   },
   "intro": {
     "tag": "Since 1984",
     "heading1": "Preserving the",
     "heading2": "Sacred Craft",
-    "para1": "Rooted in the high plateaus...",
-    "para2": "Every piece in our collection...",
+    "para1": "Rooted in the high plateaus of Tibet, our collective was born from a desire to keep the ancient traditions of metalwork and sacred symbolism alive in a modern world.",
+    "para2": "Every piece in our collection is more than just an object; it is a vessel of spirituality, handcrafted by artisans who have spent decades perfecting the delicate balance between raw earth and divine form.",
     "buttonText": "Explore the Collection",
     "buttonLink": "/products"
   },
   "images": {
-    "main": "/decore.png",
-    "square": "/Bowl.png",
-    "wide": "/Bowl.png"
+    "main": "/images/decore.png",
+    "square": "/images/bowl-square.png",
+    "wide": "/images/bowl-wide.png"
   },
   "experience": {
     "years": "40+",
@@ -27,15 +27,15 @@
     "blocks": [
       {
         "title": "Authenticity",
-        "text": "Every stone and metal is ethically sourced..."
+        "text": "Every stone and metal is ethically sourced from the Himalayan region."
       },
       {
         "title": "Tradition",
-        "text": "Using techniques passed down..."
+        "text": "Using techniques passed down through four generations of artisans."
       },
       {
         "title": "Impact",
-        "text": "10% of all proceeds..."
+        "text": "10% of all proceeds support Tibetan education and cultural preservation."
       }
     ]
   }

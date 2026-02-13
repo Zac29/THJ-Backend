@@ -1,6 +1,6 @@
 const ProductShowcase = require("../models/ProductShowcase");
+const path = require("path");
 
-// GET
 exports.getProductShow = async (req, res) => {
   try {
     const data = await ProductShowcase.findOne();
@@ -10,7 +10,6 @@ exports.getProductShow = async (req, res) => {
   }
 };
 
-// UPDATE EVERYTHING
 exports.updateProductShow = async (req, res) => {
   try {
     const data = await ProductShowcase.findOneAndUpdate({}, req.body, {
@@ -23,16 +22,18 @@ exports.updateProductShow = async (req, res) => {
   }
 };
 
-// RESET TO DEFAULT
 exports.resetProductShow = async (req, res) => {
   try {
-    await ProductShowcase.deleteMany();
-
+    await ProductShowcase.deleteMany({});
+    
+    // Explicitly pull the data
     const defaultData = require("../defaultData/ProductShowcaseDefault.json");
+
+    // Use .insertMany or .create
     const data = await ProductShowcase.create(defaultData);
 
     res.json(data);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "Reset failed: " + err.message });
   }
 };
