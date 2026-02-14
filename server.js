@@ -39,6 +39,7 @@ app.use("/api/about", require("./routes/about.routes"));
 //app.use("/api/products", require("./routes/uploadRoutes"));
 app.use("/api/upload", require("./routes/aboutUpload.routes"));
 app.use("/api/category-slider", require("./routes/categorySlider.routes"));
+app.use("/api/search", require("./routes/search.routes"));
 
 /* ---------------- Server ---------------- */
 app.listen(process.env.PORT, () =>
