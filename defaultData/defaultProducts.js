@@ -64,12 +64,12 @@ module.exports =[
     price: 2500,
     oldPrice: 3500,
     tag: "sale",
-    category: "Statue",
+    category: "Pot",
     sku: "S004",
     description:
       "A serene Buddha statue crafted to bring calmness and positive energy. Perfect for meditation rooms, offices, or sacred spaces.",
 
-    tags: ["Statue", "Meditation", "Peace"],
+    tags: ["Pot", "Peace"],
     colors: ["#000000", "#B88E2F"],
     sizes: ["L"],
     rating: 5,
@@ -102,12 +102,12 @@ module.exports =[
     price: 2500,
     oldPrice: 3500,
     tag: "sale",
-    category: "Art",
+    category: "Pot",
     sku: "S006",
     description:
       "A finely crafted bronze mandala reflecting traditional artistry. Ideal for collectors and those seeking cultural elegance in decor.",
 
-    tags: ["Bronze", "Art", "Traditional"],
+    tags: ["Pot, Bronze", "Art", "Traditional"],
     colors: ["#B88E2F"],
     sizes: ["M", "L"],
     rating: 4.6,

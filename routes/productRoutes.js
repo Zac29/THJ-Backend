@@ -25,10 +25,74 @@ router.post("/upload", upload.single("image"), async (req, res) => {
 });
 
 /* GET all products */
+// router.get("/", async (req, res) => {
+//   const products = await Product.find().sort({ createdAt: -1 });
+//   res.json(products);
+// });
+
+/* GET products (WITH CATEGORY FILTER) */
+// router.get("/", async (req, res) => {
+//   try {
+//     const { category } = req.query;
+
+//     const filter = {};
+//     if (category) {
+//       filter.category = category; // 🔥 core filter
+//     }
+
+//     const products = await Product.find(filter).sort({ createdAt: -1 });
+//     res.json(products);
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// });
+
+// router.get("/", async (req, res) => {
+//   try {
+//     const { category } = req.query;
+
+//     const filter = {};
+
+//     /* 🔥🔥🔥 THIS IS THE FIX 🔥🔥🔥 */
+//     if (category) {
+//       filter.$or = [
+//         { category: category.toLowerCase() },
+//         { tags: category.toLowerCase() },
+//       ];
+//     }
+
+//     const products = await Product.find(filter).sort({ createdAt: -1 });
+//     res.json(products);
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// });
+
 router.get("/", async (req, res) => {
-  const products = await Product.find().sort({ createdAt: -1 });
-  res.json(products);
+  try {
+    const { category } = req.query;
+
+    const filter = {};
+
+    /* 🔥🔥🔥 THIS IS THE FIX 🔥🔥🔥 */
+    if (category) {
+      const value = category.toLowerCase();
+
+      filter.$or = [
+        { category: { $regex: `^${value}$`, $options: "i" } }, // exact category
+        { tags: { $in: [value] } },                            // tag match
+        { title: { $regex: value, $options: "i" } },           // title contains
+      ];
+    }
+
+    const products = await Product.find(filter).sort({ createdAt: -1 });
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
+
+
 
 /* UPSERT */
 router.post("/upsert", async (req, res) => {
@@ -49,6 +113,9 @@ router.post("/upsert", async (req, res) => {
 
   res.json(product);
 });
+
+
+
 
 
 /* DELETE */
