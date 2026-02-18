@@ -9,7 +9,7 @@ const app = express();
 /* ---------------- CORS (VERY IMPORTANT) ---------------- */
 app.use(
   cors({
-    origin: ["http://localhost:5174","http://localhost:3000"], // your Vite port
+    origin: ["http://localhost:5174","http://localhost:3000","tibetanhandicraftjewelleryv2.netlify.app"], // your Vite port
     credentials: true,
   })
 );
