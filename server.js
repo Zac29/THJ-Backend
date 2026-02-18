@@ -26,6 +26,11 @@ mongoose
 
   
 /* ---------------- Routes ---------------- */
+
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 app.use("/api/hero", require("./routes/hero.routes"));
 app.use("/api/hero/admin", require("./routes/adminRoutes")); // ✅ add this
 app.use("/api/contact", require("./routes/contact.routes"));
