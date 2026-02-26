@@ -9,7 +9,7 @@ const app = express();
 /* ---------------- CORS (VERY IMPORTANT) ---------------- */
 app.use(
   cors({
-    origin: ["http://localhost:5174","http://localhost:3000","tibetanhandicraftjewelleryv2.netlify.app","https://thjgaya.netlify.app","https://thjbodhgaya.netlify.app","https://tibetandhammashop.com","https://www.tibetandhammashop.com/"], // your Vite port
+    origin: ["http://localhost:5174","http://localhost:3000","tibetanhandicraftjewelleryv2.netlify.app","https://thjgaya.netlify.app","https://thjbodhgaya.netlify.app","https://tibetandhammashop.com","https://www.tibetandhammashop.com","https://admin.tibetandhammashop.com"], // your Vite port
     credentials: true,
   })
 );
