@@ -1,27 +1,21 @@
 const jwt = require("jsonwebtoken");
 
 module.exports = function adminAuth(req, res, next) {
-  const token = req.cookies?.admin_token;
+  const authHeader = req.headers["authorization"];
+  const token = authHeader && authHeader.split(" ")[1]; // Bearer <token>
 
   if (!token) {
-    return res.status(401).json({
-      message: "Admin token missing",
-    });
+    return res.status(401).json({ message: "Admin token missing" });
   }
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
-    // Optional but recommended
     if (decoded.role !== "admin") {
       return res.status(403).json({ message: "Admin access only" });
     }
-
     req.admin = decoded;
     next();
   } catch (err) {
-    return res.status(401).json({
-      message: "Invalid or expired token",
-    });
+    return res.status(401).json({ message: "Invalid or expired token" });
   }
 };
