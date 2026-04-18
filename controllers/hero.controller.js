@@ -30,7 +30,13 @@ exports.updateHero = async (req, res) => {
     if (!hero) {
       hero = new Hero({ slides, style });
     } else {
-      hero.slides = slides;
+      hero.slides = slides.map((slide, i) => {
+  return {
+    ...hero.slides[i]?._doc, // keep old data
+    ...slide,                // override with new
+    image: slide.image || hero.slides[i]?.image, // 🔥 preserve image
+  };
+});
       hero.style = style;
     }
 
@@ -44,6 +50,6 @@ exports.updateHero = async (req, res) => {
 // Upload slide image
 exports.uploadSlideImage = async (req, res) => {
   res.json({
-    imageUrl: req.file.path,
+    imageUrl: req.file.path || req.file.secure_url,
   });
 };
