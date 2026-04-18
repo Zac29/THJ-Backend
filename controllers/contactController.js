@@ -9,8 +9,8 @@ exports.getSettings = async (req, res) => {
 
   if (!data) {
     data = await ContactSettings.create({
-      phone: "+91 98765 43210",
-      email: "studio@tibetanarts.com",
+      phone: "+91 98765 43210, +91 9264248884",
+      email: "sidbodhgaya@gmail.com",
       locationText: "Bodh Gaya, India",
       mapEmbedUrl: "",
     });
